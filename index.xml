@@ -15,11 +15,31 @@
     
     
     <item>
+      <title>About</title>
+      <link>https://blog.kmil.us/about/</link>
+      <pubDate>Wed, 19 Jan 2022 12:09:46 -0600</pubDate>
+      
+      <guid>https://blog.kmil.us/about/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          My name is Kirk Miller and I&amp;rsquo;ll be adding more info to this page later on.
+          
+        
+        </description>
+    </item>
+    
+    <item>
       <title>My First Post</title>
-      <link>https://blog.kmil.us/posts/misc/my-first-post/</link>
+      <link>https://blog.kmil.us/posts/my-first-post/</link>
       <pubDate>Wed, 19 Jan 2022 11:58:27 -0600</pubDate>
       
-      <guid>https://blog.kmil.us/posts/misc/my-first-post/</guid>
+      <guid>https://blog.kmil.us/posts/my-first-post/</guid>
       <description>
         
           

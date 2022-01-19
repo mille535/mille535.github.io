@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kmil.us/categories/</loc>
+    <loc>https://blog.kmil.us/categories/</loc>
   </url><url>
-    <loc>https://kmil.us/</loc>
+    <loc>https://blog.kmil.us/</loc>
   </url><url>
-    <loc>https://kmil.us/tags/</loc>
+    <loc>https://blog.kmil.us/tags/</loc>
   </url>
 </urlset>

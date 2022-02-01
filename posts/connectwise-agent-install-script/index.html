@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>
+        ConnectWise Automate Install Script ::
+        Kirk Miller
+      </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
+While there are probably better deployment methods outside of what ConnectWise recommends I figured I&amp;rsquo;d put together a down and dirty script to speed things up for this particular install."
+/>
+<meta
+  name="keywords"
+  content=""
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://blog.kmil.us/posts/connectwise-agent-install-script/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://blog.kmil.us/assets/style.css" />
+
+<link rel="stylesheet" href="https://blog.kmil.us/style.css" />
+
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="https://blog.kmil.us/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="https://blog.kmil.us/img/favicon.png" />
+
+
+<link href="https://blog.kmil.us/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://blog.kmil.us/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://blog.kmil.us/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://blog.kmil.us/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://blog.kmil.us/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://blog.kmil.us/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ConnectWise Automate Install Script"/>
+<meta name="twitter:description" content="One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
+While there are probably better deployment methods outside of what ConnectWise recommends I figured I&rsquo;d put together a down and dirty script to speed things up for this particular install."/>
+
+
+
+<meta property="og:title" content="ConnectWise Automate Install Script" />
+<meta property="og:description" content="One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
+While there are probably better deployment methods outside of what ConnectWise recommends I figured I&rsquo;d put together a down and dirty script to speed things up for this particular install." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.kmil.us/posts/connectwise-agent-install-script/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-01T11:58:27-06:00" />
+<meta property="article:modified_time" content="2022-02-01T11:58:27-06:00" /><meta property="og:site_name" content="Kirk Miller" />
+
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >Kirk Miller</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+      
+      
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title">ConnectWise Automate Install Script</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2022-02-01
+        </span>
+
+        
+          
+        
+      
+
+      
+
+
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+      <p>One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.</p>
+<p>While there are probably better deployment methods outside of what <a href="https://docs.connectwise.com/ConnectWise_Automate_Documentation/040/050">ConnectWise recommends</a> I figured I&rsquo;d put together a down and dirty script to speed things up for this particular install.</p>
+<p>For this particular install the customer has an Active Directory domain so I will be enumerating computer objects from AD and then using PSRemoting to execute commands on the client computers.</p>
+<p>Simply edit the AD query on line 2 to suit the needs of your environment and populate the CW Agent download link on line 8.</p>
+<p>Disclaimer: Use this code at your own risk.</p>
+<pre tabindex="0"><code>Import-Module ActiveDirectory
+$computers = get-adcomputer -Filter 'operatingsystem -notlike &quot;*server*&quot; -and enabled -eq &quot;true&quot;' -SearchBase &quot;CN=Computers,DC=domain,DC=tld&quot; | Select-Object -Expand DNSHostName
+
+foreach ( $computer in $computers ) {
+    $session = New-PSSession -ComputerName $computer -ErrorAction SilentlyContinue
+	
+    Invoke-Command -Session $session -ErrorAction SilentlyContinue -ScriptBlock {
+        [String]$downloadlink = '&lt;enter your agent install dl url&gt;
+        [string]$OutFile = 'Agent_Install.exe'
+        [string]$instargs = '/s'
+        $OutPath = $env:TMP
+        
+        If (Test-Path c:\windows\ltsvc\ltsvc.exe) {
+            Write-Output &quot;CW Agent already installed on $env:computername&quot;	
+        }
+        Else {
+            Invoke-WebRequest -Uri $downloadlink -OutFile $OutPath\$OutFile -ErrorAction SilentlyContinue
+            Start-Process -NoNewWindow -FilePath $OutPath\$OutFile -ArgumentList $instargs -Wait -ErrorAction SilentlyContinue
+            Write-Output &quot;CW Agent has been installed on $env:computername&quot;
+        }
+		
+    }
+    Remove-PSSession $session -ErrorAction SilentlyContinue
+}
+</code></pre><p>After writing this script I got curios to see what others have been doing and found the links below to interesting scripts.</p>
+<ul>
+<li><a href="https://www.thelazyadministrator.com/2019/04/30/deploy-connectwise-automate-formerly-labtech-agent-remotely-and-quietly-with-powershell/">The Lazy Administrator</a></li>
+<li><a href="https://github.com/LabtechConsulting/LabTech-Powershell-Module/blob/master/LabTech/Install-LTService.md">LabTech Consulting GitHub</a></li>
+</ul>
+
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h"
+              >Read other posts</span
+            >
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+            
+              <span class="button next">
+                <a href="https://blog.kmil.us/posts/my-first-post/">
+                  <span class="button__text">My First Post</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+    
+      
+        
+
+      
+    
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">2022 Kirk Miller</div>
+      
+  </div>
+</footer>
+
+<script src="https://blog.kmil.us/assets/main.js"></script>
+<script src="https://blog.kmil.us/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4MK7WX28GY"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-4MK7WX28GY', { 'anonymize_ip': false });
+}
+</script>
+
+    
+  </body>
+</html>

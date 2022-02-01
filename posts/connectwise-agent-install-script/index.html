@@ -176,60 +176,45 @@ While there are probably better deployment methods outside of what ConnectWise r
 <p>For this particular install the customer has an Active Directory domain so I will be enumerating computer objects from AD and then using PSRemoting to execute commands on the client computers.</p>
 <p>Simply edit the AD query on line 2 to suit the needs of your environment and populate the CW Agent download link on line 8.</p>
 <p>Disclaimer: Use this code at your own risk.</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Import-Module ActiveDirectory
-$computers = get-adcomputer -Filter <span style="color:#e6db74">&#39;operatingsystem -notlike &#34;*server*&#34; -and enabled -eq &#34;true&#34;&#39;</span> -SearchBase <span style="color:#e6db74">&#34;CN=Computers,DC=domain,DC=tld&#34;</span> | Select-Object -Expand DNSHostName
 
-<span style="color:#66d9ef">foreach</span> ( $computer <span style="color:#66d9ef">in</span> $computers ) {
+
+
+  <div class="collapsable-code">
+    <input id="1" type="checkbox" checked />
+    <label for="1">
+      <span class="collapsable-code__language">powershell</span>
+      <span class="collapsable-code__title">Really cool snippet</span>
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-powershell" ><code>
+Import-Module ActiveDirectory
+$computers = get-adcomputer -Filter &#39;operatingsystem -notlike &#34;*server*&#34; -and enabled -eq &#34;true&#34;&#39; -SearchBase &#34;CN=Computers,DC=domain,DC=tld&#34; | Select-Object -Expand DNSHostName
+
+foreach ( $computer in $computers ) {
     $session = New-PSSession -ComputerName $computer -ErrorAction SilentlyContinue
 	
     Invoke-Command -Session $session -ErrorAction SilentlyContinue -ScriptBlock {
-        <span style="color:#66d9ef">[String]</span>$downloadlink = <span style="color:#e6db74">&#39;&lt;enter your agent install dl url&gt;
-</span><span style="color:#e6db74">        [string]$OutFile = &#39;</span>Agent_Install.exe<span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">        [string]$instargs = &#39;</span>/s<span style="color:#960050;background-color:#1e0010">&#39;</span>
+        [String]$downloadlink = &#39;&lt;enter your agent install dl url&gt;
+        [string]$OutFile = &#39;Agent_Install.exe&#39;
+        [string]$instargs = &#39;/s&#39;
         $OutPath = $env:TMP
         
-        <span style="color:#66d9ef">If</span> (Test-Path c:\windows\ltsvc\ltsvc.exe) {
-            Write-Output <span style="color:#e6db74">&#34;CW Agent already installed on $env:computername&#34;</span>	
+        If (Test-Path c:\windows\ltsvc\ltsvc.exe) {
+            Write-Output &#34;CW Agent already installed on $env:computername&#34;	
         }
-        <span style="color:#66d9ef">Else</span> {
+        Else {
             Invoke-WebRequest -Uri $downloadlink -OutFile $OutPath\$OutFile -ErrorAction SilentlyContinue
             Start-Process -NoNewWindow -FilePath $OutPath\$OutFile -ArgumentList $instargs -Wait -ErrorAction SilentlyContinue
-            Write-Output <span style="color:#e6db74">&#34;CW Agent has been installed on $env:computername&#34;</span>
+            Write-Output &#34;CW Agent has been installed on $env:computername&#34;
         }
 		
     }
     Remove-PSSession $session -ErrorAction SilentlyContinue
-}</code></pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
+  </div>
+
+
 <p>After writing this script I got curios to see what others have been doing and found the links below to interesting scripts.</p>
 <ul>
 <li><a href="https://www.thelazyadministrator.com/2019/04/30/deploy-connectwise-automate-formerly-labtech-agent-remotely-and-quietly-with-powershell/">The Lazy Administrator</a></li>

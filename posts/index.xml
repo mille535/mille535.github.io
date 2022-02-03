@@ -9,14 +9,14 @@
     <description>Recent content in Posts on Kirk Miller</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2022 Kirk Miller</copyright>
+    <copyright>Kirk Miller 2022</copyright>
     <lastBuildDate>Tue, 01 Feb 2022 11:58:27 -0600</lastBuildDate>
     
 	<atom:link href="https://blog.kmil.us/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>ConnectWise Automate Install Script</title>
+      <title>ConnectWise Agent Install Script</title>
       <link>https://blog.kmil.us/posts/connectwise-agent-install-script/</link>
       <pubDate>Tue, 01 Feb 2022 11:58:27 -0600</pubDate>
       
@@ -31,26 +31,6 @@
         
           One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
 While there are probably better deployment methods outside of what ConnectWise recommends I figured I&amp;rsquo;d put together a down and dirty script to speed things up for this particular install.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>https://blog.kmil.us/posts/my-first-post/</link>
-      <pubDate>Wed, 19 Jan 2022 11:58:27 -0600</pubDate>
-      
-      <guid>https://blog.kmil.us/posts/my-first-post/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Hello World More to come sone, stay tuned!
           
         
         </description>

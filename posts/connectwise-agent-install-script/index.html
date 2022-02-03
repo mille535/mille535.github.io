@@ -3,7 +3,7 @@
   <head>
     
       <title>
-        ConnectWise Automate Install Script ::
+        ConnectWise Agent Install Script ::
         Kirk Miller
       </title>
     
@@ -16,7 +16,7 @@ While there are probably better deployment methods outside of what ConnectWise r
 />
 <meta
   name="keywords"
-  content=""
+  content="blog,technology,devops,powershell,sysadmin,network,coding,automation"
 />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://blog.kmil.us/posts/connectwise-agent-install-script/" />
@@ -47,13 +47,13 @@ While there are probably better deployment methods outside of what ConnectWise r
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ConnectWise Automate Install Script"/>
+<meta name="twitter:title" content="ConnectWise Agent Install Script"/>
 <meta name="twitter:description" content="One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
 While there are probably better deployment methods outside of what ConnectWise recommends I figured I&rsquo;d put together a down and dirty script to speed things up for this particular install."/>
 
 
 
-<meta property="og:title" content="ConnectWise Automate Install Script" />
+<meta property="og:title" content="ConnectWise Agent Install Script" />
 <meta property="og:description" content="One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
 While there are probably better deployment methods outside of what ConnectWise recommends I figured I&rsquo;d put together a down and dirty script to speed things up for this particular install." />
 <meta property="og:type" content="article" />
@@ -91,34 +91,6 @@ While there are probably better deployment methods outside of what ConnectWise r
 
     <span class="header__right">
       
-        <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
-    
-      
-        
-          <li><a href="/about">About</a></li>
-        
-      
-      
-      
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/about">About</a></li>
-      
-    
-  </ul>
-</nav>
-
-        <span class="menu-trigger">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-          </svg>
-        </span>
-      
       <span class="theme-toggle">
         <svg
   class="theme-toggler"
@@ -147,7 +119,7 @@ While there are probably better deployment methods outside of what ConnectWise r
   
 
   <div class="post">
-    <h1 class="post-title">ConnectWise Automate Install Script</h1>
+    <h1 class="post-title">ConnectWise Agent Install Script</h1>
     <div class="post-meta">
       
         <span class="post-date">
@@ -155,6 +127,11 @@ While there are probably better deployment methods outside of what ConnectWise r
         </span>
 
         
+          
+            
+
+
+
           
         
       
@@ -176,31 +153,9 @@ While there are probably better deployment methods outside of what ConnectWise r
 <p>For this particular install the customer has an Active Directory domain so I will be enumerating computer objects from AD and then using PSRemoting to execute commands on the client computers.</p>
 <p>Simply edit the AD query on line 2 to suit the needs of your environment and populate the CW Agent download link on line 8.</p>
 <p>Disclaimer: Use this code at your own risk.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Import-Module ActiveDirectory
-$computers = get-adcomputer -Filter <span style="color:#e6db74">&#39;operatingsystem -notlike &#34;*server*&#34; -and enabled -eq &#34;true&#34;&#39;</span> -SearchBase <span style="color:#e6db74">&#34;CN=Computers,DC=domain,DC=tld&#34;</span> | Select-Object -Expand DNSHostName
+<script type="application/javascript" src="https://gist.github.com/mille535/25419ed2eb3a7c26d4e9c9de5da66b52.js"></script>
 
-<span style="color:#66d9ef">foreach</span> ( $computer <span style="color:#66d9ef">in</span> $computers ) {
-    $session = New-PSSession -ComputerName $computer -ErrorAction SilentlyContinue
-	
-    Invoke-Command -Session $session -ErrorAction SilentlyContinue -ScriptBlock {
-        <span style="color:#66d9ef">[String]</span>$downloadlink = <span style="color:#e6db74">&#39;&lt;enter your agent install dl url&gt;
-</span><span style="color:#e6db74">        [string]$OutFile = &#39;</span>Agent_Install.exe<span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">        [string]$instargs = &#39;</span>/s<span style="color:#960050;background-color:#1e0010">&#39;</span>
-        $OutPath = $env:TMP
-        
-        <span style="color:#66d9ef">If</span> (Test-Path c:\windows\ltsvc\ltsvc.exe) {
-            Write-Output <span style="color:#e6db74">&#34;CW Agent already installed on $env:computername&#34;</span>	
-        }
-        <span style="color:#66d9ef">Else</span> {
-            Invoke-WebRequest -Uri $downloadlink -OutFile $OutPath\$OutFile -ErrorAction SilentlyContinue
-            Start-Process -NoNewWindow -FilePath $OutPath\$OutFile -ArgumentList $instargs -Wait -ErrorAction SilentlyContinue
-            Write-Output <span style="color:#e6db74">&#34;CW Agent has been installed on $env:computername&#34;</span>
-        }
-		
-    }
-    Remove-PSSession $session -ErrorAction SilentlyContinue
-}
-</code></pre></div><p>After writing this script I got curios to see what others have been doing and found the links below to interesting scripts.</p>
+<p>After writing this script I got curios to see what others have been doing and found the links below to interesting scripts.</p>
 <ul>
 <li><a href="https://www.thelazyadministrator.com/2019/04/30/deploy-connectwise-automate-formerly-labtech-agent-remotely-and-quietly-with-powershell/">The Lazy Administrator</a></li>
 <li><a href="https://github.com/LabtechConsulting/LabTech-Powershell-Module/blob/master/LabTech/Install-LTService.md">LabTech Consulting GitHub</a></li>
@@ -208,26 +163,6 @@ $computers = get-adcomputer -Filter <span style="color:#e6db74">&#39;operatingsy
 
     </div>
     
-      
-        <div class="pagination">
-          <div class="pagination__title">
-            <span class="pagination__title-h"
-              >Read other posts</span
-            >
-            <hr />
-          </div>
-          <div class="pagination__buttons">
-            
-            
-              <span class="button next">
-                <a href="https://blog.kmil.us/posts/my-first-post/">
-                  <span class="button__text">My First Post</span>
-                  <span class="button__icon">→</span>
-                </a>
-              </span>
-            
-          </div>
-        </div>
       
     
 
@@ -245,7 +180,7 @@ $computers = get-adcomputer -Filter <span style="color:#e6db74">&#39;operatingsy
         <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">2022 Kirk Miller</div>
+      <div class="copyright copyright--user">Kirk Miller 2022</div>
       
   </div>
 </footer>

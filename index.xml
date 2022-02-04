@@ -1,59 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Kirk Miller</title>
-    
-    
-    
     <link>https://blog.kmil.us/</link>
     <description>Recent content on Kirk Miller</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Kirk Miller 2022</copyright>
-    <lastBuildDate>Tue, 01 Feb 2022 11:58:27 -0600</lastBuildDate>
-    
-	<atom:link href="https://blog.kmil.us/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 01 Feb 2022 11:58:27 -0600</lastBuildDate><atom:link href="https://blog.kmil.us/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ConnectWise Agent Install Script</title>
       <link>https://blog.kmil.us/posts/connectwise-agent-install-script/</link>
       <pubDate>Tue, 01 Feb 2022 11:58:27 -0600</pubDate>
       
       <guid>https://blog.kmil.us/posts/connectwise-agent-install-script/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
-While there are probably better deployment methods outside of what ConnectWise recommends I figured I&amp;rsquo;d put together a down and dirty script to speed things up for this particular install.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://blog.kmil.us/about/</link>
-      <pubDate>Wed, 19 Jan 2022 12:09:46 -0600</pubDate>
-      
-      <guid>https://blog.kmil.us/about/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          My name is Kirk Miller and I&amp;rsquo;ll be adding more info to this page later on.
-          
-        
-        </description>
+      <description>One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
+While there are probably better deployment methods outside of what ConnectWise recommends I figured I&amp;rsquo;d put together a down and dirty script to speed things up for this particular install.</description>
     </item>
     
   </channel>

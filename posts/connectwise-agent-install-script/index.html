@@ -5,8 +5,7 @@
 <meta name=robots content="index, follow">
 <title>ConnectWise Agent Install Script | Kirk Miller</title>
 <meta name=keywords content>
-<meta name=description content="One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
-While there are probably better deployment methods outside of what ConnectWise recommends I figured I&rsquo;d put together a down and dirty script to speed things up for this particular install.">
+<meta name=description content="A quick script to deploy CW Agent using AD and PSRemoting">
 <meta name=author content="Kirk">
 <link rel=canonical href=https://blog.kmil.us/posts/connectwise-agent-install-script/>
 <link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
@@ -26,18 +25,16 @@ While there are probably better deployment methods outside of what ConnectWise r
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4MK7WX28GY"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-4MK7WX28GY',{anonymize_ip:!1})}</script>
 <meta property="og:title" content="ConnectWise Agent Install Script">
-<meta property="og:description" content="One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
-While there are probably better deployment methods outside of what ConnectWise recommends I figured I&rsquo;d put together a down and dirty script to speed things up for this particular install.">
+<meta property="og:description" content="A quick script to deploy CW Agent using AD and PSRemoting">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.kmil.us/posts/connectwise-agent-install-script/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2022-02-01T11:58:27-06:00">
 <meta property="article:modified_time" content="2022-02-01T11:58:27-06:00"><meta property="og:site_name" content="ExampleSite">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="ConnectWise Agent Install Script">
-<meta name=twitter:description content="One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
-While there are probably better deployment methods outside of what ConnectWise recommends I figured I&rsquo;d put together a down and dirty script to speed things up for this particular install.">
+<meta name=twitter:description content="A quick script to deploy CW Agent using AD and PSRemoting">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://blog.kmil.us/posts/"},{"@type":"ListItem","position":3,"name":"ConnectWise Agent Install Script","item":"https://blog.kmil.us/posts/connectwise-agent-install-script/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"ConnectWise Agent Install Script","name":"ConnectWise Agent Install Script","description":"One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.\nWhile there are probably better deployment methods outside of what ConnectWise recommends I figured I\u0026rsquo;d put together a down and dirty script to speed things up for this particular install.","keywords":[],"articleBody":"One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.\nWhile there are probably better deployment methods outside of what ConnectWise recommends I figured I’d put together a down and dirty script to speed things up for this particular install.\nFor this particular install the customer has an Active Directory domain so I will be enumerating computer objects from AD and then using PSRemoting to execute commands on the client computers.\nSimply edit the AD query on line 2 to suit the needs of your environment and populate the CW Agent download link on line 8.\nDisclaimer: Use this code at your own risk.\n After writing this script I got curios to see what others have been doing and found the links below to interesting scripts.\n The Lazy Administrator LabTech Consulting GitHub  ","wordCount":"167","inLanguage":"en","datePublished":"2022-02-01T11:58:27-06:00","dateModified":"2022-02-01T11:58:27-06:00","author":{"@type":"Person","name":"Kirk"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.kmil.us/posts/connectwise-agent-install-script/"},"publisher":{"@type":"Organization","name":"Kirk Miller","logo":{"@type":"ImageObject","url":"https://blog.kmil.us/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"ConnectWise Agent Install Script","name":"ConnectWise Agent Install Script","description":"A quick script to deploy CW Agent using AD and PSRemoting","keywords":[],"articleBody":"One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.\nWhile there are probably better deployment methods outside of what ConnectWise recommends I figured I’d put together a down and dirty script to speed things up for this particular install.\nFor this particular install the customer has an Active Directory domain so I will be enumerating computer objects from AD and then using PSRemoting to execute commands on the client computers.\nSimply edit the AD query on line 2 to suit the needs of your environment and populate the CW Agent download link on line 8.\nDisclaimer: Use this code at your own risk.\nImport-Module ActiveDirectory $computers = get-adcomputer ` -Filter 'operatingsystem -notlike \"*server*\" -and enabled -eq \"true\"' ` -SearchBase \"CN=Computers,DC=domain,DC=tld\" | Select-Object -Expand DNSHostName foreach ( $computer in $computers ) { $session = New-PSSession -ComputerName $computer -ErrorAction SilentlyContinue Invoke-Command -Session $session -ErrorAction SilentlyContinue -ScriptBlock { [String]$downloadlink = '' [string]$OutFile = 'Agent_Install.exe' [string]$instargs = '/s' $OutPath = $env:TMP If (Test-Path c:\\windows\\ltsvc\\ltsvc.exe) { Write-Output \"CW Agent already installed on $env:computername\"\t} Else { Invoke-WebRequest -Uri $downloadlink -OutFile $OutPath\\$OutFile -ErrorAction SilentlyContinue Start-Process -NoNewWindow -FilePath $OutPath\\$OutFile -ArgumentList $instargs -Wait -ErrorAction SilentlyContinue Write-Output \"CW Agent has been installed on $env:computername\" } } Remove-PSSession $session -ErrorAction SilentlyContinue } After writing this script I got curios to see what others have been doing and found the links below to interesting scripts.\n The Lazy Administrator LabTech Consulting GitHub  ","wordCount":"271","inLanguage":"en","datePublished":"2022-02-01T11:58:27-06:00","dateModified":"2022-02-01T11:58:27-06:00","author":{"@type":"Person","name":"Kirk"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.kmil.us/posts/connectwise-agent-install-script/"},"publisher":{"@type":"Organization","name":"Kirk Miller","logo":{"@type":"ImageObject","url":"https://blog.kmil.us/favicon.ico"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -61,6 +58,11 @@ While there are probably better deployment methods outside of what ConnectWise r
 <span>tags</span>
 </a>
 </li>
+<li>
+<a href=https://blog.kmil.us/search/ title="search (Alt + /)" accesskey=/>
+<span>search</span>
+</a>
+</li>
 </ul>
 </nav>
 </header>
@@ -71,7 +73,10 @@ While there are probably better deployment methods outside of what ConnectWise r
 <h1 class=post-title>
 ConnectWise Agent Install Script
 </h1>
-<div class=post-meta><span title="2022-02-01 11:58:27 -0600 -0600">February 1, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Kirk
+<div class=post-description>
+A quick script to deploy CW Agent using AD and PSRemoting
+</div>
+<div class=post-meta><span title="2022-02-01 11:58:27 -0600 -0600">February 1, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Kirk
 </div>
 </header>
 <div class=post-content><p>One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.</p>
@@ -79,8 +84,33 @@ ConnectWise Agent Install Script
 <p>For this particular install the customer has an Active Directory domain so I will be enumerating computer objects from AD and then using PSRemoting to execute commands on the client computers.</p>
 <p>Simply edit the AD query on line 2 to suit the needs of your environment and populate the CW Agent download link on line 8.</p>
 <p>Disclaimer: Use this code at your own risk.</p>
-<script type=application/javascript src=https://gist.github.com/mille535/25419ed2eb3a7c26d4e9c9de5da66b52.js></script>
-<p>After writing this script I got curios to see what others have been doing and found the links below to interesting scripts.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>Import-Module ActiveDirectory
+$computers = get-adcomputer `
+-Filter <span style=color:#e6db74>&#39;operatingsystem -notlike &#34;*server*&#34; -and enabled -eq &#34;true&#34;&#39;</span> `
+-SearchBase <span style=color:#e6db74>&#34;CN=Computers,DC=domain,DC=tld&#34;</span> | Select-Object -Expand DNSHostName
+
+<span style=color:#66d9ef>foreach</span> ( $computer <span style=color:#66d9ef>in</span> $computers ) {
+    $session = New-PSSession -ComputerName $computer -ErrorAction SilentlyContinue
+	
+    Invoke-Command -Session $session -ErrorAction SilentlyContinue -ScriptBlock {
+        <span style=color:#66d9ef>[String]</span>$downloadlink = <span style=color:#e6db74>&#39;&lt;enter your agent install dl url&gt;&#39;</span>
+        <span style=color:#66d9ef>[string]</span>$OutFile = <span style=color:#e6db74>&#39;Agent_Install.exe&#39;</span>
+        <span style=color:#66d9ef>[string]</span>$instargs = <span style=color:#e6db74>&#39;/s&#39;</span>
+        $OutPath = $env:TMP
+        
+        <span style=color:#66d9ef>If</span> (Test-Path c:\windows\ltsvc\ltsvc.exe) {
+            Write-Output <span style=color:#e6db74>&#34;CW Agent already installed on $env:computername&#34;</span>	
+        }
+        <span style=color:#66d9ef>Else</span> {
+            Invoke-WebRequest -Uri $downloadlink -OutFile $OutPath\$OutFile -ErrorAction SilentlyContinue
+            Start-Process -NoNewWindow -FilePath $OutPath\$OutFile -ArgumentList $instargs -Wait -ErrorAction SilentlyContinue
+            Write-Output <span style=color:#e6db74>&#34;CW Agent has been installed on $env:computername&#34;</span>
+        }
+		
+    }
+    Remove-PSSession $session -ErrorAction SilentlyContinue
+}
+</code></pre></div><p>After writing this script I got curios to see what others have been doing and found the links below to interesting scripts.</p>
 <ul>
 <li><a href=https://www.thelazyadministrator.com/2019/04/30/deploy-connectwise-automate-formerly-labtech-agent-remotely-and-quietly-with-powershell/>The Lazy Administrator</a></li>
 <li><a href=https://github.com/LabtechConsulting/LabTech-Powershell-Module/blob/master/LabTech/Install-LTService.md>LabTech Consulting GitHub</a></li>

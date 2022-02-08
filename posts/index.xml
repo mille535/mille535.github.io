@@ -12,8 +12,7 @@
       <pubDate>Tue, 01 Feb 2022 11:58:27 -0600</pubDate>
       
       <guid>https://blog.kmil.us/posts/connectwise-agent-install-script/</guid>
-      <description>One would think working in IT would make me a patient person. Today I found myself tired of waiting for the ConnectWise Automate agents to be deployed for a customer. Normally I push these agent-type installs using group policy which is fine in most cases.
-While there are probably better deployment methods outside of what ConnectWise recommends I figured I&amp;rsquo;d put together a down and dirty script to speed things up for this particular install.</description>
+      <description>A quick script to deploy CW Agent using AD and PSRemoting</description>
     </item>
     
   </channel>

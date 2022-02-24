@@ -2,19 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.kmil.us/tags/active-directory/</loc>
+    <lastmod>2022-02-01T11:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/categories/</loc>
+    <lastmod>2022-02-01T11:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/connectwise/</loc>
+    <lastmod>2022-02-01T11:58:27-06:00</lastmod>
+  </url><url>
     <loc>https://blog.kmil.us/posts/connectwise-agent-install-script/</loc>
     <lastmod>2022-02-01T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/</loc>
     <lastmod>2022-02-01T11:58:27-06:00</lastmod>
   </url><url>
+    <loc>https://blog.kmil.us/tags/labtech/</loc>
+    <lastmod>2022-02-01T11:58:27-06:00</lastmod>
+  </url><url>
     <loc>https://blog.kmil.us/posts/</loc>
     <lastmod>2022-02-01T11:58:27-06:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/categories/</loc>
+    <loc>https://blog.kmil.us/tags/powershell/</loc>
+    <lastmod>2022-02-01T11:58:27-06:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/search/</loc>
+    <loc>https://blog.kmil.us/categories/powershell/</loc>
+    <lastmod>2022-02-01T11:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/psremoting/</loc>
+    <lastmod>2022-02-01T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/tags/</loc>
+    <lastmod>2022-02-01T11:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/search/</loc>
   </url>
 </urlset>

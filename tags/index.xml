@@ -4,6 +4,52 @@
     <title>Tags on Kirk Miller</title>
     <link>https://blog.kmil.us/tags/</link>
     <description>Recent content in Tags on Kirk Miller</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://blog.kmil.us/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 01 Feb 2022 11:58:27 -0600</lastBuildDate><atom:link href="https://blog.kmil.us/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Active Directory</title>
+      <link>https://blog.kmil.us/tags/active-directory/</link>
+      <pubDate>Tue, 01 Feb 2022 11:58:27 -0600</pubDate>
+      
+      <guid>https://blog.kmil.us/tags/active-directory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Connectwise</title>
+      <link>https://blog.kmil.us/tags/connectwise/</link>
+      <pubDate>Tue, 01 Feb 2022 11:58:27 -0600</pubDate>
+      
+      <guid>https://blog.kmil.us/tags/connectwise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LabTech</title>
+      <link>https://blog.kmil.us/tags/labtech/</link>
+      <pubDate>Tue, 01 Feb 2022 11:58:27 -0600</pubDate>
+      
+      <guid>https://blog.kmil.us/tags/labtech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>powershell</title>
+      <link>https://blog.kmil.us/tags/powershell/</link>
+      <pubDate>Tue, 01 Feb 2022 11:58:27 -0600</pubDate>
+      
+      <guid>https://blog.kmil.us/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PSRemoting</title>
+      <link>https://blog.kmil.us/tags/psremoting/</link>
+      <pubDate>Tue, 01 Feb 2022 11:58:27 -0600</pubDate>
+      
+      <guid>https://blog.kmil.us/tags/psremoting/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -72,11 +72,10 @@
 </h2>
 </header>
 <section class=entry-content>
-<p>ESET Protect version 9.0.10.3 running on Microsoft Windows Server 2019.
-Create directories for the ACME challenge to be presented.
+<p>Create directories for the ACME challenge to be presented.
 New-Item "C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.54\docbase\.well-known" -ItemType Directory Create a folder to store our certificate files.
 New-Item "C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.54\acme-ssl" -ItemType Directory Take a backup of the stock Tomcat configuration file. Copy-Item "C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.54\conf\server.xml" "C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.54\conf\server.xml.orig.bak"
-Add the following line the the end of the &lt;Host> section of Tomcat config file: C:\Program Files\Apache Software Foundation\apache-tomcat-9....</p>
+Add the following line the the end of the &lt;Host> section of Tomcat config file: C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.54\conf\server.xml...</p>
 </section>
 <footer class=entry-footer><span title="2022-02-23 11:58:27 -0600 -0600">February 23, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Kirk</footer>
 <a class=entry-link aria-label="post link to Setup ESET Protect Server to use LetsEncrypt Certificates" href=https://blog.kmil.us/posts/eset-protect-letsencrypt/></a>

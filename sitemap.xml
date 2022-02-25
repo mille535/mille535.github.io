@@ -3,48 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.kmil.us/categories/</loc>
+    <lastmod>2022-02-24T06:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/eset/</loc>
+    <lastmod>2022-02-24T06:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/categories/eset/</loc>
+    <lastmod>2022-02-24T06:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/</loc>
+    <lastmod>2022-02-24T06:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/posts/</loc>
+    <lastmod>2022-02-24T06:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/powershell/</loc>
+    <lastmod>2022-02-24T06:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/posts/run-scripts-from-eset-protect/</loc>
+    <lastmod>2022-02-24T06:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/</loc>
+    <lastmod>2022-02-24T06:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/apache-tomcat/</loc>
     <lastmod>2022-02-23T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/tags/certbot/</loc>
     <lastmod>2022-02-23T11:58:27-06:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/tags/era/</loc>
+    <loc>https://blog.kmil.us/tags/lets-encrypt/</loc>
     <lastmod>2022-02-23T11:58:27-06:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/tags/eset/</loc>
-    <lastmod>2022-02-23T11:58:27-06:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/tags/esmc/</loc>
-    <lastmod>2022-02-23T11:58:27-06:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/</loc>
-    <lastmod>2022-02-23T11:58:27-06:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/categories/letsencrypt/</loc>
-    <lastmod>2022-02-23T11:58:27-06:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/tags/letsencrypt/</loc>
-    <lastmod>2022-02-23T11:58:27-06:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/posts/</loc>
-    <lastmod>2022-02-23T11:58:27-06:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/tags/powershell/</loc>
-    <lastmod>2022-02-23T11:58:27-06:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/tags/protect/</loc>
+    <loc>https://blog.kmil.us/categories/lets-encrypt/</loc>
     <lastmod>2022-02-23T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/posts/eset-protect-letsencrypt/</loc>
     <lastmod>2022-02-23T11:58:27-06:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/tags/</loc>
+    <loc>https://blog.kmil.us/tags/ssl/</loc>
     <lastmod>2022-02-23T11:58:27-06:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/categories/windows/</loc>
-    <lastmod>2022-02-23T11:58:27-06:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/tags/windows/</loc>
+    <loc>https://blog.kmil.us/tags/windows-server/</loc>
     <lastmod>2022-02-23T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/tags/active-directory/</loc>
@@ -63,6 +63,9 @@
     <lastmod>2022-02-01T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/tags/psremoting/</loc>
+    <lastmod>2022-02-01T11:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/winrm/</loc>
     <lastmod>2022-02-01T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/search/</loc>

@@ -5,7 +5,18 @@
     <link>https://blog.kmil.us/</link>
     <description>Recent content on Kirk Miller</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Mar 2022 23:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 May 2022 18:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Useful Steam Deck Resources</title>
+      <link>https://blog.kmil.us/posts/steam-deck-resources/</link>
+      <pubDate>Thu, 19 May 2022 18:23:44 -0500</pubDate>
+      
+      <guid>https://blog.kmil.us/posts/steam-deck-resources/</guid>
+      <description>I finally received my Valve Steam Deck. There are lots of cool tidbits out there already so I will likely not be creating any content about it—unless I decide to turn it into a hypervisor or something cool like that!
+Here are a couple of useful resources I have found and used pertaining to the Steam Deck:
+protondb - Allows you to search games to see if they are compatible with GNU/Linux or Steam Deck.</description>
+    </item>
+    
     <item>
       <title>Use cdcrypt to convert Wii U games for Cemu</title>
       <link>https://blog.kmil.us/posts/use-cdcrypt-for-wiiu-games-cemu/</link>

@@ -5,7 +5,16 @@
     <link>https://blog.kmil.us/posts/</link>
     <description>Recent content in Posts on Kirk Miller</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 19 May 2022 18:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Aug 2022 20:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure Site-to-Site VPN between FortiGate and Meraki</title>
+      <link>https://blog.kmil.us/posts/fortigate-meraki-vpn-setup/</link>
+      <pubDate>Wed, 10 Aug 2022 20:23:44 -0500</pubDate>
+      
+      <guid>https://blog.kmil.us/posts/fortigate-meraki-vpn-setup/</guid>
+      <description>Step-by-step instructions using the WebUI</description>
+    </item>
+    
     <item>
       <title>Useful Steam Deck Resources</title>
       <link>https://blog.kmil.us/posts/steam-deck-resources/</link>

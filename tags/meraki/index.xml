@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Meraki on Kirk Miller</title>
+    <link>https://blog.kmil.us/tags/meraki/</link>
+    <description>Recent content in Meraki on Kirk Miller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 10 Aug 2022 20:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/tags/meraki/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure Site-to-Site VPN between FortiGate and Meraki</title>
+      <link>https://blog.kmil.us/posts/fortigate-meraki-vpn-setup/</link>
+      <pubDate>Wed, 10 Aug 2022 20:23:44 -0500</pubDate>
+      
+      <guid>https://blog.kmil.us/posts/fortigate-meraki-vpn-setup/</guid>
+      <description>Step-by-step instructions using the WebUI</description>
+    </item>
+    
+  </channel>
+</rss>

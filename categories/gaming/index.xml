@@ -18,5 +18,14 @@ Here are a couple of useful resources I have found and used pertaining to the St
 protondb - Allows you to search games to see if they are compatible with GNU/Linux or Steam Deck.</description>
     </item>
     
+    <item>
+      <title>Use cdcrypt to convert Wii U games for Cemu</title>
+      <link>https://blog.kmil.us/posts/use-cdcrypt-for-wiiu-games-cemu/</link>
+      <pubDate>Mon, 21 Mar 2022 23:23:44 -0500</pubDate>
+      
+      <guid>https://blog.kmil.us/posts/use-cdcrypt-for-wiiu-games-cemu/</guid>
+      <description>Run your legally dumped Wii U games on any PC</description>
+    </item>
+    
   </channel>
 </rss>

@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.kmil.us/thankyou/</loc>
+    <lastmod>2022-10-05T21:52:46+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/contact/</loc>
+    <lastmod>2022-10-05T21:35:03+00:00</lastmod>
+  </url><url>
     <loc>https://blog.kmil.us/categories/</loc>
     <lastmod>2022-08-10T20:23:44-05:00</lastmod>
   </url><url>
@@ -32,6 +38,9 @@
     <loc>https://blog.kmil.us/tags/s2s/</loc>
     <lastmod>2022-08-10T20:23:44-05:00</lastmod>
   </url><url>
+    <loc>https://blog.kmil.us/tags/site-to-site/</loc>
+    <lastmod>2022-08-10T20:23:44-05:00</lastmod>
+  </url><url>
     <loc>https://blog.kmil.us/tags/</loc>
     <lastmod>2022-08-10T20:23:44-05:00</lastmod>
   </url><url>
@@ -53,7 +62,7 @@
     <loc>https://blog.kmil.us/tags/cemu/</loc>
     <lastmod>2022-03-21T23:23:44-05:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/categories/emulation/</loc>
+    <loc>https://blog.kmil.us/tags/emulation/</loc>
     <lastmod>2022-03-21T23:23:44-05:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/posts/use-cdcrypt-for-wiiu-games-cemu/</loc>
@@ -62,10 +71,13 @@
     <loc>https://blog.kmil.us/tags/wii-u/</loc>
     <lastmod>2022-03-21T23:23:44-05:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/tags/eset/</loc>
+    <loc>https://blog.kmil.us/categories/automation/</loc>
     <lastmod>2022-02-24T06:58:27-06:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/categories/eset/</loc>
+    <loc>https://blog.kmil.us/tags/batch/</loc>
+    <lastmod>2022-02-24T06:58:27-06:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/eset/</loc>
     <lastmod>2022-02-24T06:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/tags/powershell/</loc>
@@ -81,9 +93,6 @@
     <lastmod>2022-02-23T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/tags/lets-encrypt/</loc>
-    <lastmod>2022-02-23T11:58:27-06:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/categories/lets-encrypt/</loc>
     <lastmod>2022-02-23T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/posts/eset-protect-letsencrypt/</loc>
@@ -105,9 +114,6 @@
     <lastmod>2022-02-01T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/tags/labtech/</loc>
-    <lastmod>2022-02-01T11:58:27-06:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/categories/powershell/</loc>
     <lastmod>2022-02-01T11:58:27-06:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/tags/psremoting/</loc>

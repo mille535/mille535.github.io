@@ -7,6 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 10 Aug 2022 20:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Thank You</title>
+      <link>https://blog.kmil.us/thankyou/</link>
+      <pubDate>Wed, 05 Oct 2022 21:52:46 +0000</pubDate>
+      
+      <guid>https://blog.kmil.us/thankyou/</guid>
+      <description>Thanks for the feedback.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://blog.kmil.us/contact/</link>
+      <pubDate>Wed, 05 Oct 2022 21:35:03 +0000</pubDate>
+      
+      <guid>https://blog.kmil.us/contact/</guid>
+      <description>Name*Email*Subject*MessageSend</description>
+    </item>
+    
+    <item>
       <title>Configure Site-to-Site VPN between FortiGate and Meraki</title>
       <link>https://blog.kmil.us/posts/fortigate-meraki-vpn-setup/</link>
       <pubDate>Wed, 10 Aug 2022 20:23:44 -0500</pubDate>

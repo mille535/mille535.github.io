@@ -5,7 +5,17 @@
     <link>https://blog.kmil.us/posts/</link>
     <description>Recent content in Posts on Kirk Miller</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 10 Aug 2022 20:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Oct 2022 18:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enable Modern Authentication for Outlook 2013</title>
+      <link>https://blog.kmil.us/posts/outlook-2013-modern-auth/</link>
+      <pubDate>Mon, 10 Oct 2022 18:23:44 -0500</pubDate>
+      
+      <guid>https://blog.kmil.us/posts/outlook-2013-modern-auth/</guid>
+      <description>Hopefully your organization has already tested and enabled Modern Authentication for Office 365 as October is the month that Microsoft will be disabling basic authentication.
+A common issue when changing from basic to modern auth is that sometimes the client doesn’t want to switch. A person could certainly setup an entirely new Outlook profile, but it may be easier to use the Windows Registry to force Outlook to use modern auth.</description>
+    </item>
+    
     <item>
       <title>Configure Site-to-Site VPN between FortiGate and Meraki</title>
       <link>https://blog.kmil.us/posts/fortigate-meraki-vpn-setup/</link>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Office on Kirk Miller</title>
+    <link>https://blog.kmil.us/tags/office/</link>
+    <description>Recent content in Office on Kirk Miller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 10 Oct 2022 18:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/tags/office/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enable Modern Authentication for Outlook 2013</title>
+      <link>https://blog.kmil.us/posts/outlook-2013-modern-auth/</link>
+      <pubDate>Mon, 10 Oct 2022 18:23:44 -0500</pubDate>
+      
+      <guid>https://blog.kmil.us/posts/outlook-2013-modern-auth/</guid>
+      <description>Hopefully your organization has already tested and enabled Modern Authentication for Office 365 as October is the month that Microsoft will be disabling basic authentication.
+A common issue when changing from basic to modern auth is that sometimes the client doesn’t want to switch. A person could certainly setup an entirely new Outlook profile, but it may be easier to use the Windows Registry to force Outlook to use modern auth.</description>
+    </item>
+    
+  </channel>
+</rss>

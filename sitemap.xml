@@ -3,12 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.kmil.us/categories/</loc>
-    <lastmod>2022-10-10T18:23:44-05:00</lastmod>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/posts/outlook-2013-modern-auth/</loc>
-    <lastmod>2022-10-10T18:23:44-05:00</lastmod>
+    <loc>https://blog.kmil.us/tags/esxi/</loc>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/posts/hp-esxi-expand-array/</loc>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/hpe/</loc>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/</loc>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/p408i/</loc>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/posts/</loc>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/raid/</loc>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/</loc>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/tags/vmware/</loc>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/categories/vmware/</loc>
+    <lastmod>2022-10-12T18:23:44-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.kmil.us/posts/outlook-2013-modern-auth/</loc>
     <lastmod>2022-10-10T18:23:44-05:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/tags/microsoft/</loc>
@@ -26,16 +53,10 @@
     <loc>https://blog.kmil.us/tags/outlook/</loc>
     <lastmod>2022-10-10T18:23:44-05:00</lastmod>
   </url><url>
-    <loc>https://blog.kmil.us/posts/</loc>
-    <lastmod>2022-10-10T18:23:44-05:00</lastmod>
-  </url><url>
     <loc>https://blog.kmil.us/tags/powershell/</loc>
     <lastmod>2022-10-10T18:23:44-05:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/tags/registry/</loc>
-    <lastmod>2022-10-10T18:23:44-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.kmil.us/tags/</loc>
     <lastmod>2022-10-10T18:23:44-05:00</lastmod>
   </url><url>
     <loc>https://blog.kmil.us/categories/windows/</loc>

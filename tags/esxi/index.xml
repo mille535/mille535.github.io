@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ESXi on Kirk Miller</title>
+    <link>https://blog.kmil.us/tags/esxi/</link>
+    <description>Recent content in ESXi on Kirk Miller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 12 Oct 2022 18:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/tags/esxi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Expand RAID array on HPE ESXi host</title>
+      <link>https://blog.kmil.us/posts/hp-esxi-expand-array/</link>
+      <pubDate>Wed, 12 Oct 2022 18:23:44 -0500</pubDate>
+      
+      <guid>https://blog.kmil.us/posts/hp-esxi-expand-array/</guid>
+      <description>without reboot, using command line tools</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,16 @@
     <link>https://blog.kmil.us/</link>
     <description>Recent content on Kirk Miller</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 10 Oct 2022 18:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Oct 2022 18:23:44 -0500</lastBuildDate><atom:link href="https://blog.kmil.us/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Expand RAID array on HPE ESXi host</title>
+      <link>https://blog.kmil.us/posts/hp-esxi-expand-array/</link>
+      <pubDate>Wed, 12 Oct 2022 18:23:44 -0500</pubDate>
+      
+      <guid>https://blog.kmil.us/posts/hp-esxi-expand-array/</guid>
+      <description>without reboot, using command line tools</description>
+    </item>
+    
     <item>
       <title>Enable Modern Authentication for Outlook 2013</title>
       <link>https://blog.kmil.us/posts/outlook-2013-modern-auth/</link>
